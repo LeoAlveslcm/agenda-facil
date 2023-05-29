@@ -3,20 +3,18 @@ import {
   View, 
   Text, 
   StyleSheet,
-  Image,
   TouchableOpacity,
   TextInput
 } from 'react-native'
 
 import * as Animatable from 'react-native-animatable'
-
 import { useNavigation } from '@react-navigation/native'
 
 export default function SignIn() {
   const navigation = useNavigation();
 
     return (
-      <View style={styles.container}>
+      <View style={{backgroundColor: '#fff'}}>
         
         <View style={styles.imgBox}>
           <Animatable.Image
@@ -51,27 +49,24 @@ export default function SignIn() {
               style={[styles.btn, styles.btnEntrar]}
               onPress={ () => navigation.navigate('Home')}
               >
-                <Text style={styles.txtEntrar}>Entrar</Text>
+                <Text style={{fontSize: 18, color: '#fff'}}>Entrar</Text>
               </TouchableOpacity>
 
               <TouchableOpacity 
               style={[styles.btn, styles.btnCadastrar]}
               onPress={ () => navigation.navigate('SignUp')}
               >
-                <Text style={styles.txtCadastrar}>Cadastrar</Text>
+                <Text style={{fontSize: 18}}>Cadastrar</Text>
               </TouchableOpacity>
             </View>
           </View>
         </Animatable.View>
+
       </View>
     );
   }
 
   const styles = StyleSheet.create({
-    container:{
-      backgroundColor: '#fff',
-    },
-
     imgBox:{
       height: 300,
       display: "flex",
@@ -150,14 +145,4 @@ export default function SignIn() {
       backgroundColor: '#ffffff',
       elevation: 5,
     },
-
-    txtEntrar:{
-      color: '#ffffff',
-      fontSize: 18,
-    },
-
-    txtCadastrar:{
-      fontSize: 18
-    }
-
   })

@@ -1,18 +1,14 @@
-import React, {useState} from "react"
+import React from "react"
 import { 
   View, 
   Text, 
   StyleSheet,
-  Image,
   TouchableOpacity,
   TextInput,
   ScrollView
 } from 'react-native'
 
-import * as Animatable from 'react-native-animatable'
-
 import { useNavigation } from '@react-navigation/native'
-
 import { Ionicons } from '@expo/vector-icons'
 
 export default function Profile() {
@@ -21,108 +17,110 @@ export default function Profile() {
     return (
       <ScrollView>
       <View style={styles.container}>
+
         <View style={styles.header}>
           <Ionicons name="person-circle-outline" size={100} color='#ffffff'/>
         </View>
 
         
-          <View style={styles.inputGroup}>
-            <Text style={styles.title}>Dados Pessoais</Text>
+        <View style={styles.inputGroup}>
+          <Text style={styles.title}>Dados Pessoais</Text>
 
-            <View style={styles.inputBox}>
-              <Text>Nome: </Text>
-              <TextInput
-                value="Fulano"
-                style={styles.input}
-              />
-            </View>
+          <View style={styles.inputBox}>
+            <Text>Nome: </Text>
+            <TextInput
+              value="Fulano"
+              style={styles.input}
+            />
+          </View>
             
-            <View style={styles.inputBox}>
-              <Text>Sobrenome: </Text>
-              <TextInput
-                value="Sabino Silva"
-                style={styles.input}
-              />
-            </View>
-
-            <View style={styles.inputBox}>
-              <Text>Usuário: </Text>
-              <TextInput
-                value="fulsab97"
-                style={styles.input}
-              />
-            </View>
-
-            <View style={styles.inputBox}>
-              <Text>E-mail: </Text>
-              <TextInput
-                value="fulanosabsilva@gmail.com"
-                style={styles.input}
-              />
-            </View>
-
-            <View style={styles.inputBox}>
-              <Text>Telefone: </Text>
-              <TextInput
-                value="81999887766"
-                style={styles.input}
-              />
-            </View>
-
-            <TouchableOpacity style={styles.btnSave}>
-            <Text style={styles.btnText}>Salvar dados</Text>
-            </TouchableOpacity>
+          <View style={styles.inputBox}>
+            <Text>Sobrenome: </Text>
+            <TextInput
+              value="Sabino Silva"
+              style={styles.input}
+            />
           </View>
 
-          <View style={styles.changeBox}>
-            <Text style={styles.title}>Alterar senha</Text>
-
-            <View style={styles.inputBox}>
-              <Text>Senha atual: </Text>
-              <TextInput
-                placeholder="Senha atual"
-                style={styles.input}
-                secureTextEntry={true}
-              />
-            </View>
-
-            <View style={styles.inputBox}>
-              <Text>Nova senha: </Text>
-              <TextInput
-                placeholder="Nova senha"
-                style={styles.input}
-                secureTextEntry={true}
-              />
-            </View>
-
-            <View style={styles.inputBox}>
-              <Text>Confirme a nova senha: </Text>
-              <TextInput
-                placeholder="Repita a nova senha"
-                style={styles.input}
-                secureTextEntry={true}
-              />
-            </View>
-
-            <TouchableOpacity style={styles.btnSave}>
-            <Text style={styles.btnText}>Alterar Senha</Text>
-            </TouchableOpacity>
+          <View style={styles.inputBox}>
+            <Text>Usuário: </Text>
+            <TextInput
+              value="fulsab97"
+              style={styles.input}
+            />
           </View>
 
-          <TouchableOpacity 
-          onPress={() => navigation.navigate('ProfessionalHome')}>
-          <Text style={styles.changeProfile}>Perfil Profissional</Text>
-          </TouchableOpacity>
+          <View style={styles.inputBox}>
+            <Text>E-mail: </Text>
+            <TextInput
+              value="fulanosabsilva@gmail.com"
+              style={styles.input}
+            />
+          </View>
 
-          <TouchableOpacity 
-          onPress={() => navigation.navigate('Home')}>
-          <Text style={styles.changeProfile}>Perfil Cliente</Text>
-          </TouchableOpacity>
+          <View style={styles.inputBox}>
+            <Text>Telefone: </Text>
+            <TextInput
+              value="81999887766"
+              style={styles.input}
+            />
+          </View>
 
-          <TouchableOpacity 
-          onPress={ () => navigation.navigate('SignIn')}>
-          <Text style={styles.exit}>Sair</Text>
+          <TouchableOpacity style={styles.btnSave}>
+          <Text style={styles.btnText}>Salvar dados</Text>
           </TouchableOpacity>
+        </View>
+
+        <View style={styles.changeBox}>
+          <Text style={styles.title}>Alterar senha</Text>
+
+          <View style={styles.inputBox}>
+            <Text>Senha atual: </Text>
+            <TextInput
+              placeholder="Senha atual"
+              style={styles.input}
+              secureTextEntry={true}
+            />
+          </View>
+
+          <View style={styles.inputBox}>
+            <Text>Nova senha: </Text>
+            <TextInput
+              placeholder="Nova senha"
+              style={styles.input}
+              secureTextEntry={true}
+            />
+          </View>
+
+          <View style={styles.inputBox}>
+            <Text>Confirme a nova senha: </Text>
+            <TextInput
+              placeholder="Repita a nova senha"
+              style={styles.input}
+              secureTextEntry={true}
+            />
+          </View>
+
+          <TouchableOpacity style={styles.btnSave}>
+          <Text style={styles.btnText}>Alterar Senha</Text>
+          </TouchableOpacity>
+        </View>
+
+        <TouchableOpacity 
+        onPress={() => navigation.navigate('ProfessionalHome')}>
+        <Text style={styles.changeProfile}>Perfil Profissional</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity 
+        onPress={() => navigation.navigate('Home')}>
+        <Text style={styles.changeProfile}>Perfil Cliente</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity 
+        onPress={ () => navigation.navigate('SignIn')}>
+        <Text style={styles.exit}>Sair</Text>
+        </TouchableOpacity>
+
       </View>
       </ScrollView>
 

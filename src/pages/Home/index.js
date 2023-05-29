@@ -5,14 +5,11 @@ import {
   StyleSheet,
   Image,
   TouchableOpacity,
-  TextInput,
-  Pressable
 } from 'react-native'
 
 import * as Animatable from 'react-native-animatable'
 
 import { useNavigation } from '@react-navigation/native'
-
 import { Ionicons } from '@expo/vector-icons'
 
 export default function Home() {

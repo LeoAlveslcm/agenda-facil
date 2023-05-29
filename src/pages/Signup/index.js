@@ -4,7 +4,6 @@ import {
   View, 
   Text, 
   StyleSheet,
-  Image,
   TouchableOpacity,
   TextInput,
 } from 'react-native'
@@ -19,6 +18,7 @@ export default function SignUn() {
 
     return (
       <View style={styles.container}>
+
         <Animatable.View animation="fadeInUp" style={styles.box}>
           <View style={styles.inputGroup}>
             <View style={styles.inputForm}>
@@ -74,18 +74,19 @@ export default function SignUn() {
             </View>
             
 
-            <TouchableOpacity onPress={ () => navigation.navigate('SignIn')}>
-              <Text style={styles.txtVoltar}>Voltar</Text>
+            <TouchableOpacity 
+            onPress={ () => navigation.navigate('SignIn')}>
+              <Text style={{fontSize: 18, color: '#00275b'}}>Voltar</Text>
             </TouchableOpacity>
 
             <TouchableOpacity 
             style={[styles.btnCadastrar]}   
-            onPress={ () => navigation.navigate('Home')}
-            >
-              <Text style={styles.txtCadastrar}>Cadastrar</Text>
+            onPress={ () => navigation.navigate('Home')}>
+              <Text style={{fontSize: 18, color: '#fff'}}>Cadastrar</Text>
             </TouchableOpacity>
           </View>
         </Animatable.View>
+
       </View>
     );
   }
@@ -147,11 +148,6 @@ export default function SignUn() {
       gap: 10,
     },
 
-    txtVoltar:{
-      fontSize: 18,
-      color: '#00275b'
-    },
-
     btnCadastrar:{
       width: 300,
       height: 45,
@@ -161,47 +157,5 @@ export default function SignUn() {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center', 
-    },
-
-    txtCadastrar:{
-      fontSize: 18,
-      color: '#ffffff',
-    },
-
-    btnBox:{
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
-      gap: 18,
-    },
-
-    btnImg:{
-      width: 140,
-      height: 40,
-      borderRadius: 10,
-      
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-
-    btnFace:{
-      backgroundColor: '#395185',
-      elevation: 5,
-    },
-
-    btnGoogle:{
-      backgroundColor: '#ffffff',
-      elevation: 5,
-    },
-
-    txtFace:{
-      fontSize: 16,
-      color: '#ffffff',
-    },
-
-    txtGoogle:{
-      fontSize: 16,
     },
   })

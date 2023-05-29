@@ -3,7 +3,6 @@ import {
   View, 
   Text, 
   StyleSheet,
-  Image,
   TouchableOpacity,
   TextInput
 } from 'react-native'
@@ -17,10 +16,12 @@ export default function CreateSchedules() {
 
     return (
       <View style={styles.container}>
+
         <Text style={styles.titleContainer}>Preencha os campos a seguir:</Text>
 
         <View style={styles.pickerBox}>
           <Text style={styles.pickerTitle}>Selecione o profissional:</Text>
+
           <Picker 
           style={styles.selectBox}
           selectedValue={name}
@@ -28,7 +29,6 @@ export default function CreateSchedules() {
               <Picker.Item key={0} value={"Severino"} label="Severino (Barbeiro)" />    
               <Picker.Item key={1} value={"Adriana"} label="Adriana (Manicure)" />           
           </Picker>
-          
         </View>
 
         <TextInput
@@ -43,6 +43,7 @@ export default function CreateSchedules() {
 
         <View style={styles.pickerBox}>
           <Text style={styles.pickerTitle}>Selecione a data:</Text>
+
           <Picker 
           style={styles.selectBox}
           selectedValue={name}
@@ -53,11 +54,11 @@ export default function CreateSchedules() {
               <Picker.Item key={3} value={"date4"} label="15/06" />  
               <Picker.Item key={4} value={"date5"} label="16/06" />          
           </Picker>
-          
         </View>
 
         <View style={styles.pickerBox}>
           <Text style={styles.pickerTitle}>Selecione o horario:</Text>
+
           <Picker 
           style={styles.selectBox}
           selectedValue={name}
@@ -68,12 +69,12 @@ export default function CreateSchedules() {
               <Picker.Item key={3} value={"hour4"} label="17:30" />  
               <Picker.Item key={4} value={"hour5"} label="19:00" />           
           </Picker>
-          
         </View>
 
         <TouchableOpacity style={[styles.btn]}>
-          <Text style={styles.txtBtn}>Criar Agendamento</Text>
+          <Text style={{fontSize: 18, color: '#fff'}}>Criar Agendamento</Text>
         </TouchableOpacity>
+        
       </View>
     );
   }
@@ -129,9 +130,4 @@ export default function CreateSchedules() {
       alignItems: 'center',
       justifyContent: 'center',
     },
-
-    txtBtn:{
-      color: '#fff',
-      fontSize: 18,
-    }
   })

@@ -3,12 +3,9 @@ import {
   View, 
   Text, 
   StyleSheet,
-  Image,
   TouchableOpacity,
   ScrollView
 } from 'react-native'
-
-import * as Animatable from 'react-native-animatable'
 
 import { useNavigation } from '@react-navigation/native'
 
@@ -18,6 +15,7 @@ export default function Schedules() {
     return (
       <ScrollView>
       <View style={styles.container}>
+
         <Text style={styles.titleContainer}>Agendamentos vigentes:</Text>
 
         <View style={styles.schedulesBox}>
@@ -71,8 +69,8 @@ export default function Schedules() {
               </TouchableOpacity>
             </View>
           </View>
-
         </View>
+
       </View>
       </ScrollView>
     );

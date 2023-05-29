@@ -5,23 +5,20 @@ import {
   StyleSheet,
   Image,
   TouchableOpacity,
-  TextInput,
-  Pressable
 } from 'react-native'
 
 import * as Animatable from 'react-native-animatable'
 
 import { useNavigation } from '@react-navigation/native'
-
 import { Ionicons } from '@expo/vector-icons'
 
 export default function Home() {
   const navigation = useNavigation();
 
     return (
-      <Animatable.View 
-      animation="pulse"
-      style={styles.container}>
+    <Animatable.View 
+    animation="pulse"
+    style={styles.container}>
         
         <View style={styles.header}>
             <Text style={styles.bemVindo}>Bem-vindo Fulano</Text>
@@ -64,9 +61,9 @@ export default function Home() {
             <Text>Conta Profissional</Text>
         </View>
         
-      </Animatable.View>
+    </Animatable.View>
     );
-  }
+}
 
   const styles = StyleSheet.create({
     container:{
