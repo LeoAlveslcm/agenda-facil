@@ -10,6 +10,7 @@ import Contacts from '../pages/Contacts'
 import Schedules from '../pages/Schedules'
 import CreateSchedules from '../pages/CreateSchedules'
 import Profile from '../pages/Profile'
+import ProfessionalHome from '../pages/ProfessionalHome'
 
 import { Ionicons } from '@expo/vector-icons'
 
@@ -78,6 +79,12 @@ export default function Routes(){
             />   
 
             <Stack.Screen
+                name="ProfessionalHome"
+                component={ProfessionalHome}
+                options={{ headerShown: false }}
+            />  
+
+            <Stack.Screen
                 name="Contacts"
                 component={Tabs}
                 options={{ headerShown: false }}
@@ -92,6 +99,7 @@ export default function Routes(){
                         backgroundColor: "#00275b",
                     },
                     headerTintColor: '#ffffff',
+                    headerTitleAlign: 'center',
                 }}
             /> 
 
@@ -104,6 +112,7 @@ export default function Routes(){
                         backgroundColor: "#00275b",
                     },
                     headerTintColor: '#ffffff',
+                    headerTitleAlign: 'center',
                 }}
             /> 
 
@@ -116,6 +125,7 @@ export default function Routes(){
                         backgroundColor: "#00275b",
                     },
                     headerTintColor: '#ffffff',
+                    headerTitleAlign: 'center',
                 }}
             /> 
         </Stack.Navigator>

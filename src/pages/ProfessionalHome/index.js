@@ -41,22 +41,27 @@ export default function Home() {
 
             <TouchableOpacity 
             style={[styles.btnBox, styles.btn1]}
-            onPress={ () => navigation.navigate('Schedules')}>
+            onPress={ () => navigation.navigate('')}>
                 <Image 
-                source={require('../../assets/meus-agendamentos.png')}
+                source={require('../../assets/consultar-agendamentos.png')}
                 style={{ width: 100, height: 100 }}/>
 
-                <Text style={styles.txt}>Meus Agendamentos</Text> 
+                <Text style={styles.txt}>Consultar Agendamentos</Text> 
             </TouchableOpacity>
 
             <TouchableOpacity 
             style={[styles.btnBox, styles.btn2]}
-            onPress={ () => navigation.navigate('CreateSchedules')}>
+            onPress={ () => navigation.navigate('')}>
                 <Image 
-                source={require('../../assets/criar-agendamento.png')}
+                source={require('../../assets/disponibilizar-agendamentos.png')}
                 style={{ width: 100, height: 100 }}/>
-                <Text style={styles.txt}>Criar Agendamento</Text>
+                <Text style={styles.txt}>Disponibilizar Agendamento</Text>
             </TouchableOpacity>
+        </View>
+
+        <View style={{display: 'flex', flexDirection: 'row', gap: 10}}>
+            <Ionicons name="briefcase-outline" size={20} color='#000'/>
+            <Text>Conta Profissional</Text>
         </View>
         
       </Animatable.View>
@@ -131,5 +136,4 @@ export default function Home() {
         color: '#ffffff',
         fontSize: 20,
     },
-
   })

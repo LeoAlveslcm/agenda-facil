@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import { 
   View, 
   Text, 
@@ -109,7 +109,18 @@ export default function Profile() {
             </TouchableOpacity>
           </View>
 
-          <TouchableOpacity onPress={ () => navigation.navigate('SignIn')}>
+          <TouchableOpacity 
+          onPress={() => navigation.navigate('ProfessionalHome')}>
+          <Text style={styles.changeProfile}>Perfil Profissional</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity 
+          onPress={() => navigation.navigate('Home')}>
+          <Text style={styles.changeProfile}>Perfil Cliente</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity 
+          onPress={ () => navigation.navigate('SignIn')}>
           <Text style={styles.exit}>Sair</Text>
           </TouchableOpacity>
       </View>
@@ -121,6 +132,8 @@ export default function Profile() {
 
   const styles = StyleSheet.create({
     container:{
+      backgroundColor: '#fff',
+      
       display: 'flex',
       alignItems: 'center',
       gap: 20,
@@ -178,13 +191,15 @@ export default function Profile() {
       alignSelf: 'center',
     },
 
+    changeProfile:{
+      width: 350,
+      color: '#00275b',
+    },
+
     exit:{
-      width: 50,
+      width: 350,
       marginBottom: 50,
-      textAlign: 'center',
       color: '#a00824',
-      borderBottomWidth: 1,
-      borderBottomColor: '#a00824'
     }
 
   })

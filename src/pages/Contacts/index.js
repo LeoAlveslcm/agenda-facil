@@ -45,6 +45,10 @@ export default function Contacts() {
   }
 
   const styles = StyleSheet.create({
+    container:{
+      backgroundColor: '#fff',
+    },
+
     header:{
       width: '100%',
       height: 60,

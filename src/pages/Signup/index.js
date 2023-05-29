@@ -93,6 +93,8 @@ export default function SignUn() {
   const styles = StyleSheet.create({
     container:{
       height: '100%',
+      backgroundColor: '#fff',
+
       display: 'flex',
       justifyContent: 'flex-end',
     },

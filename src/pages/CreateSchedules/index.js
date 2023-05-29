@@ -82,10 +82,12 @@ export default function CreateSchedules() {
     container:{
       width: '100%',
       height: '100%',
+      marginTop: 50,
+      backgroundColor: '#fff',
 
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'flex-start',
       gap: 25,
     },
 
