@@ -4,9 +4,10 @@ import {
   Text, 
   StyleSheet,
   TouchableOpacity,
-  TextInput,
   ScrollView
 } from 'react-native'
+
+import Input from "../../components/Input"
 
 import { useNavigation } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons'
@@ -23,48 +24,14 @@ export default function Profile() {
         </View>
 
         
-        <View style={styles.inputGroup}>
+        <View style={styles.changeBox}>
           <Text style={styles.title}>Dados Pessoais</Text>
 
-          <View style={styles.inputBox}>
-            <Text>Nome: </Text>
-            <TextInput
-              value="Fulano"
-              style={styles.input}
-            />
-          </View>
-            
-          <View style={styles.inputBox}>
-            <Text>Sobrenome: </Text>
-            <TextInput
-              value="Sabino Silva"
-              style={styles.input}
-            />
-          </View>
-
-          <View style={styles.inputBox}>
-            <Text>Usuário: </Text>
-            <TextInput
-              value="fulsab97"
-              style={styles.input}
-            />
-          </View>
-
-          <View style={styles.inputBox}>
-            <Text>E-mail: </Text>
-            <TextInput
-              value="fulanosabsilva@gmail.com"
-              style={styles.input}
-            />
-          </View>
-
-          <View style={styles.inputBox}>
-            <Text>Telefone: </Text>
-            <TextInput
-              value="81999887766"
-              style={styles.input}
-            />
-          </View>
+          <Input label= "Nome: " name= "Fulano" />
+          <Input label= "Sobrenome: " name= "Sabino Silva" />
+          <Input label= "Usuário: " name= "fulsab97" />
+          <Input label= "E-mail: " name= "fulanosabsilva@gmail.com" />
+          <Input label= "Telefone: " name= "81999887766" />
 
           <TouchableOpacity style={styles.btnSave}>
           <Text style={styles.btnText}>Salvar dados</Text>
@@ -74,41 +41,30 @@ export default function Profile() {
         <View style={styles.changeBox}>
           <Text style={styles.title}>Alterar senha</Text>
 
-          <View style={styles.inputBox}>
-            <Text>Senha atual: </Text>
-            <TextInput
-              placeholder="Senha atual"
-              style={styles.input}
-              secureTextEntry={true}
-            />
-          </View>
-
-          <View style={styles.inputBox}>
-            <Text>Nova senha: </Text>
-            <TextInput
-              placeholder="Nova senha"
-              style={styles.input}
-              secureTextEntry={true}
-            />
-          </View>
-
-          <View style={styles.inputBox}>
-            <Text>Confirme a nova senha: </Text>
-            <TextInput
-              placeholder="Repita a nova senha"
-              style={styles.input}
-              secureTextEntry={true}
-            />
-          </View>
+          <Input label= "Senha atual: " place= "Senha atual" secure={true}/>
+          <Input label= "Nova senha: " place= "Nova senha" secure={true}/>
+          <Input label= "Confirme sua nova senha: " place= "Repita a nova senha" secure={true}/>
 
           <TouchableOpacity style={styles.btnSave}>
           <Text style={styles.btnText}>Alterar Senha</Text>
           </TouchableOpacity>
         </View>
 
+        <View style={styles.changeBox}>
+          <Text style={styles.title}>Perfil Prrofissional</Text>
+
+          <Input label= "Prestador: " place= "Nome do prestador" />
+          <Input label= "Serviço: " place= "Serviço prestado" />
+          <Input label= "Endereço: " place= "Endereço comercial" />
+
+          <TouchableOpacity style={styles.btnSave}>
+          <Text style={styles.btnText}>Salvar dados</Text>
+          </TouchableOpacity>
+        </View>
+
         <TouchableOpacity 
         onPress={() => navigation.navigate('ProfessionalHome')}>
-        <Text style={styles.changeProfile}>Perfil Profissional</Text>
+        <Text style={[styles.changeProfile, styles.change1]}>Perfil Profissional</Text>
         </TouchableOpacity>
 
         <TouchableOpacity 
@@ -132,7 +88,6 @@ export default function Profile() {
     container:{
       backgroundColor: '#fff',
       
-      display: 'flex',
       alignItems: 'center',
       gap: 20,
     },
@@ -142,15 +97,16 @@ export default function Profile() {
       height: 150,
       backgroundColor: '#00275b',
 
-      display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
     },
 
-    inputGroup:{
-      display: 'flex',
-      gap: 20,
+    changeBox:{
+      top: 20,
+      marginBottom: 20,
+
       alignItems: 'flex-start',
+      gap: 20,
     },
 
     input:{
@@ -171,15 +127,6 @@ export default function Profile() {
       color: '#ffffff',
     },
 
-    changeBox:{
-      top: 20,
-      paddingBottom: 50,
-
-      display: 'flex',
-      alignItems: 'flex-start',
-      gap: 20,
-    },
-
     title:{
       width: 350,
       padding: 20,
@@ -192,6 +139,10 @@ export default function Profile() {
     changeProfile:{
       width: 350,
       color: '#00275b',
+    },
+
+    change1:{
+      marginTop: 30,
     },
 
     exit:{

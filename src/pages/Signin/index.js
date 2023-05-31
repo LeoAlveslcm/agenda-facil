@@ -7,6 +7,8 @@ import {
   TextInput
 } from 'react-native'
 
+import InputSign from '../../components/InputSign'
+
 import * as Animatable from 'react-native-animatable'
 import { useNavigation } from '@react-navigation/native'
 
@@ -33,17 +35,11 @@ export default function SignIn() {
               <View style={styles.line}></View>
             </View>
 
-            <TextInput
-              placeholder="Usuário"
-              style={styles.input}
-            />
-
-            <TextInput
-              placeholder="Senha"
-              style={styles.input}
-              secureTextEntry={true}
-            />
-
+            <View style={styles.inputBox}>
+              <InputSign place= "Usuário"/>
+              <InputSign place= "Senha" secure={true}/>
+            </View>
+            
             <View style={styles.inputButtons}>
               <TouchableOpacity 
               style={[styles.btn, styles.btnEntrar]}
@@ -69,7 +65,6 @@ export default function SignIn() {
   const styles = StyleSheet.create({
     imgBox:{
       height: 300,
-      display: "flex",
       alignItems: "center",
       justifyContent: "center",
     },
@@ -87,7 +82,6 @@ export default function SignIn() {
       backgroundColor: '#ffffff',
       height: '100%',
       borderRadius: 10,
-      display: 'flex',
       alignItems: 'center',
       justifyContent: 'flex-start',
       gap: 10,
@@ -95,11 +89,15 @@ export default function SignIn() {
 
     inputHeader:{
       width: '100%',
-      display: 'flex',
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
       gap: 20,
+    },
+
+    inputBox:{
+      top: 15,
+      gap: 10,
     },
 
     line:{
@@ -113,15 +111,7 @@ export default function SignIn() {
       color: '#00275b'
     },
 
-    input:{
-      top: 15,
-      height: 40,
-      width: 300,
-      borderBottomWidth: 0.5,
-    },
-
     inputButtons:{
-      display: 'flex',
       gap: 15,
       top: 30,
     },
@@ -131,7 +121,6 @@ export default function SignIn() {
       width: 300,
       height: 45,
       borderRadius: 10,
-      display: 'flex',
       justifyContent: 'center',
       alignItems: 'center'
     },

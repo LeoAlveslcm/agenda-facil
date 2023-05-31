@@ -29,14 +29,12 @@ export default function Schedules() {
 
   const styles = StyleSheet.create({
     contacts:{
-        display: 'flex',
         gap: 20,
       },
     
       contactsBox:{
         paddingLeft: 20,
     
-        display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         gap: 10,

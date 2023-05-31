@@ -8,6 +8,8 @@ import {
   TextInput,
 } from 'react-native'
 
+import InputSign from '../../components/InputSign'
+
 import * as Animatable from 'react-native-animatable'
 import { useNavigation } from '@react-navigation/native'
 
@@ -22,36 +24,13 @@ export default function SignUn() {
         <Animatable.View animation="fadeInUp" style={styles.box}>
           <View style={styles.inputGroup}>
             <View style={styles.inputForm}>
-              <TextInput
-                placeholder="Nome"
-                style={styles.input}
-              />
-
-              <TextInput
-                placeholder="Sobrenome"
-                style={styles.input}
-              />
-
-              <TextInput
-                placeholder="Email"
-                style={styles.input}
-              />
-
-              <TextInput
-                placeholder="Telefone"
-                style={styles.input}
-              />
-
-              <TextInput
-                placeholder="Usuário"
-                style={styles.input}
-              />
-
-              <TextInput
-                placeholder="Senha"
-                style={styles.input}
-                secureTextEntry={true}
-              />
+              
+              <InputSign place= "Nome"/>
+              <InputSign place= "Sobrenome"/>
+              <InputSign place= "E-mail"/>
+              <InputSign place= "Telefone"/>
+              <InputSign place= "Usuário"/>
+              <InputSign place= "Senha" secure={true}/>
             </View>
 
             <View style={styles.checkView}>
@@ -72,7 +51,6 @@ export default function SignUn() {
                 <Text>Cliente</Text>
               </View>
             </View>
-            
 
             <TouchableOpacity 
             onPress={ () => navigation.navigate('SignIn')}>
@@ -96,7 +74,6 @@ export default function SignUn() {
       height: '100%',
       backgroundColor: '#fff',
 
-      display: 'flex',
       justifyContent: 'flex-end',
     },
 
@@ -115,7 +92,6 @@ export default function SignUn() {
       height: '100%',
       paddingVertical: 20,
 
-      display: 'flex',
       alignItems: 'center',
       justifyContent: 'flex-start',
       gap: 15,
@@ -125,25 +101,16 @@ export default function SignUn() {
     },
 
     inputForm:{
-      display: 'flex',
       gap: 15,
-    },
-
-    input:{
-      height: 40,
-      width: 300,
-      borderBottomWidth: 0.5,
     },
 
     checkView:{
       width: 300,
-      display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-around'
     },
 
     checkBox:{
-      display: 'flex',
       flexDirection: 'row',
       gap: 10,
     },
@@ -154,7 +121,6 @@ export default function SignUn() {
       backgroundColor: '#00275b',
       borderRadius: 10,
 
-      display: 'flex',
       justifyContent: 'center',
       alignItems: 'center', 
     },

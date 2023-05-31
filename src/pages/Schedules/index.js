@@ -83,7 +83,6 @@ export default function Schedules() {
       marginTop: 50,
       marginBottom: 20,
 
-      display: 'flex',
       alignItems: 'center',
       justifyContent: 'flex-start',
       gap: 25,
@@ -105,7 +104,6 @@ export default function Schedules() {
       width: '100%',
       height: '100%',
 
-      display: 'flex',
     },
 
     schedules:{
@@ -115,7 +113,6 @@ export default function Schedules() {
       backgroundColor: '#fff',
       borderRadius: 5,
 
-      display: 'flex',
       alignItems: 'center',
       gap: 10,
       elevation: 5,
@@ -131,7 +128,6 @@ export default function Schedules() {
       width: '100%',
       marginTop: 10,
 
-      display: 'flex',
       flexDirection: 'row',
       justifyContent: 'space-around',
     },

@@ -86,7 +86,6 @@ export default function CreateSchedules() {
       marginTop: 50,
       backgroundColor: '#fff',
 
-      display: 'flex',
       alignItems: 'center',
       justifyContent: 'flex-start',
       gap: 25,
@@ -106,7 +105,6 @@ export default function CreateSchedules() {
 
     pickerBox:{
       width: 350,
-      display: 'flex',
       gap: 5,
     },
 
@@ -126,7 +124,6 @@ export default function CreateSchedules() {
       backgroundColor: '#0097b2',
       borderRadius: 10,
 
-      display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
     },

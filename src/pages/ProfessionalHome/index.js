@@ -9,6 +9,8 @@ import {
 
 import * as Animatable from 'react-native-animatable'
 
+import HeaderBar from '../../components/HeaderBar';
+
 import { useNavigation } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons'
 
@@ -20,14 +22,7 @@ export default function Home() {
     animation="pulse"
     style={styles.container}>
         
-        <View style={styles.header}>
-            <Text style={styles.bemVindo}>Bem-vindo Fulano</Text>
-            
-            <TouchableOpacity 
-            onPress={ () => navigation.navigate('Profile')}>
-                <Ionicons name="person-circle-outline" size={50} color='#ffffff'/>
-            </TouchableOpacity>
-        </View>
+        <HeaderBar />
 
         <View style={styles.body}>
             <Image
@@ -70,35 +65,14 @@ export default function Home() {
         height: '100%',
         backgroundColor: '#fff',
 
-        display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-start',
-    },
-
-    header:{
-        width: '100%',
-        height: 60,
-        
-        backgroundColor: '#00275b',
-        borderBottomEndRadius: 10,
-        borderBottomStartRadius: 10,
-
-        display: 'flex',
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-around',
-    },
-
-    bemVindo:{
-        color: '#ffffff',
-        fontSize: 18,
     },
 
     body:{
         height: 600,
         paddingBottom: 50,
 
-        display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
         gap: 20,
@@ -115,7 +89,6 @@ export default function Home() {
         borderRadius: 10,
         backgroundColor: '#e8e8e8',
 
-        display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         gap: 10,
