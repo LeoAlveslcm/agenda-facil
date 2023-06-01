@@ -11,6 +11,8 @@ import Schedules from '../pages/Schedules'
 import CreateSchedules from '../pages/CreateSchedules'
 import Profile from '../pages/Profile'
 import ProfessionalHome from '../pages/ProfessionalHome'
+import ConsultSchedules from '../pages/ConsultSchedules'
+import MakeSchedulesAvaibale from '../pages/MakeSchedulesAvaibale'
 
 import { Ionicons } from '@expo/vector-icons'
 
@@ -121,6 +123,32 @@ export default function Routes(){
                 component={Profile}
                 options={{
                     title: 'Perfil',
+                    headerStyle: {
+                        backgroundColor: "#00275b",
+                    },
+                    headerTintColor: '#ffffff',
+                    headerTitleAlign: 'center',
+                }}
+            /> 
+
+            <Stack.Screen
+                name="ConsultSchedules"
+                component={ConsultSchedules}
+                options={{
+                    title: 'Agendamentos Vigentes',
+                    headerStyle: {
+                        backgroundColor: "#00275b",
+                    },
+                    headerTintColor: '#ffffff',
+                    headerTitleAlign: 'center',
+                }}
+            /> 
+
+            <Stack.Screen
+                name="MakeSchedulesAvaibale"
+                component={MakeSchedulesAvaibale}
+                options={{
+                    title: 'Disponibilizar Agendamento',
                     headerStyle: {
                         backgroundColor: "#00275b",
                     },

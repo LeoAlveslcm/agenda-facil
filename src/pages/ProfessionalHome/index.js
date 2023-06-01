@@ -33,7 +33,7 @@ export default function Home() {
 
             <TouchableOpacity 
             style={[styles.btnBox, styles.btn1]}
-            onPress={ () => navigation.navigate('')}>
+            onPress={ () => navigation.navigate('ConsultSchedules')}>
                 <Image 
                 source={require('../../assets/consultar-agendamentos.png')}
                 style={{ width: 100, height: 100 }}/>
@@ -43,7 +43,7 @@ export default function Home() {
 
             <TouchableOpacity 
             style={[styles.btnBox, styles.btn2]}
-            onPress={ () => navigation.navigate('')}>
+            onPress={ () => navigation.navigate('MakeSchedulesAvaibale')}>
                 <Image 
                 source={require('../../assets/disponibilizar-agendamentos.png')}
                 style={{ width: 100, height: 100 }}/>

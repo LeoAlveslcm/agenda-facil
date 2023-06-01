@@ -8,6 +8,7 @@ import {
 } from 'react-native'
 
 import Input from "../../components/Input"
+import SaveButton from "../../components/SaveButton"
 
 import { useNavigation } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons'
@@ -33,9 +34,7 @@ export default function Profile() {
           <Input label= "E-mail: " name= "fulanosabsilva@gmail.com" />
           <Input label= "Telefone: " name= "81999887766" />
 
-          <TouchableOpacity style={styles.btnSave}>
-          <Text style={styles.btnText}>Salvar dados</Text>
-          </TouchableOpacity>
+          <SaveButton txt= "Salvar Dados" />
         </View>
 
         <View style={styles.changeBox}>
@@ -45,9 +44,7 @@ export default function Profile() {
           <Input label= "Nova senha: " place= "Nova senha" secure={true}/>
           <Input label= "Confirme sua nova senha: " place= "Repita a nova senha" secure={true}/>
 
-          <TouchableOpacity style={styles.btnSave}>
-          <Text style={styles.btnText}>Alterar Senha</Text>
-          </TouchableOpacity>
+          <SaveButton txt= "Alterar Senha" />
         </View>
 
         <View style={styles.changeBox}>
@@ -57,9 +54,7 @@ export default function Profile() {
           <Input label= "Serviço: " place= "Serviço prestado" />
           <Input label= "Endereço: " place= "Endereço comercial" />
 
-          <TouchableOpacity style={styles.btnSave}>
-          <Text style={styles.btnText}>Salvar dados</Text>
-          </TouchableOpacity>
+          <SaveButton txt= "Salvar Dados" />
         </View>
 
         <TouchableOpacity 
@@ -113,18 +108,6 @@ export default function Profile() {
       height: 40,
       width: 350,
       borderBottomWidth: 0.5,
-    },
-
-    btnSave:{
-      top: 10,
-      paddingHorizontal: 30,
-      paddingVertical: 5,
-      backgroundColor: '#00275b',
-      borderRadius: 5,
-    },
-
-    btnText:{
-      color: '#ffffff',
     },
 
     title:{
