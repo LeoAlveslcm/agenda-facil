@@ -6,6 +6,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   TextInput,
+  KeyboardAvoidingView,
 } from 'react-native'
 
 import * as yup from 'yup'
@@ -39,7 +40,7 @@ export default function SignUn() {
   
     return (
       <View style={styles.container}>
-
+        <KeyboardAvoidingView behavior="position" enabled keyboardVerticalOffset={-125}>
         <Animatable.View animation="fadeInUp" style={styles.box}>
           <View style={styles.inputGroup}>
             <View style={{gap: 15}}>
@@ -162,7 +163,7 @@ export default function SignUn() {
             </TouchableOpacity>
           </View>
         </Animatable.View>
-
+        </KeyboardAvoidingView>
       </View>
     );
   }
@@ -177,8 +178,8 @@ export default function SignUn() {
 
     box:{
       width: '100%',
-      height: '80%',
-      top: 20,
+      height: '100%',
+      top: 160,
       paddingTop: 50,
       paddingHorizontal: 20,
 

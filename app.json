@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#00275B"
-      }
+      },
+      "package": "com.leoalves397.agendaFacil"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "99ab45d7-be2e-4187-a743-6bd995b97474"
+      }
     }
   }
 }

@@ -20,9 +20,9 @@ export default function Schedules() {
         <Text style={styles.titleContainer}>Agendamentos vigentes:</Text>
 
         <View style={{width: '100%', height: '100%'}}>
-          <SchedulesBox nome="Severino" data="14/06" hora="14:00"/>
-          <SchedulesBox nome="Adriana" data="13/06" hora="16:30"/>
-          <SchedulesBox nome="Adriana" data="15/06" hora="19:00"/>
+          <SchedulesBox professional="Barbeiro" nome="Severino" data="14/06" hora="14:00"/>
+          <SchedulesBox professional="Manicure" nome="Adriana" data="13/06" hora="16:30"/>
+          <SchedulesBox professional="Manicure" nome="Adriana" data="15/06" hora="19:00"/>
         </View>
 
       </View>

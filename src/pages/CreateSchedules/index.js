@@ -30,12 +30,12 @@ export default function CreateSchedules() {
         </View>
 
         <TextInput
-          placeholder="Digite seu nome"
+          placeholder="Digite o nome"
           style={styles.input}
         />
 
         <TextInput
-          placeholder="Digite seu sobrenome"
+          placeholder="Digite o sobrenome"
           style={styles.input}
         />
 

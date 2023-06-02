@@ -10,10 +10,11 @@ const SchedulesBox = (props) => {
   nome = props.nome
   data = props.data
   hora = props.hora
+  professional = props.professional
 
   return (
     <View style={styles.schedules}>
-        <Text style={styles.schedulesTitle}>Barbeiro</Text>
+        <Text style={styles.schedulesTitle}>{professional}</Text>
         <Text>Profissional: {nome}</Text>
         <Text>Data: {data}</Text>
         <Text>Horario: {hora}</Text>

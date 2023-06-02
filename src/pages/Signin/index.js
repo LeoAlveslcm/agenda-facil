@@ -4,6 +4,7 @@ import {
   Text, 
   StyleSheet,
   TouchableOpacity,
+  KeyboardAvoidingView,
 } from 'react-native'
 
 import InputSign from '../../components/Inputs/InputSign'
@@ -16,47 +17,47 @@ export default function SignIn() {
 
     return (
       <View style={{backgroundColor: '#fff'}}>
-        
-        <View style={styles.imgBox}>
-          <Animatable.Image
-            animation="flipInY"
-            source={require('../../assets/img-signin.png')}
-            style={{ width: 200 }}
-            resizeMode="contain"
-          />
-        </View>
-
-        <Animatable.View delay={600} animation="fadeInUp" style={styles.box}>
-          <View style={styles.inputGroup}>
-            <View style={styles.inputHeader}>
-              <View style={styles.line}></View>
-              <Text style={styles.title}>Login</Text>
-              <View style={styles.line}></View>
-            </View>
-
-            <View style={{top: 15, gap: 10}}>
-              <InputSign place= "Usuário"/>
-              <InputSign place= "Senha" secure={true}/>
-            </View>
-            
-            <View style={{gap: 15, top: 30}}>
-              <TouchableOpacity 
-              style={[styles.btn, styles.btnEntrar]}
-              onPress={ () => navigation.navigate('Home')}
-              >
-                <Text style={{fontSize: 18, color: '#fff'}}>Entrar</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity 
-              style={[styles.btn, styles.btnCadastrar]}
-              onPress={ () => navigation.navigate('SignUp')}
-              >
-                <Text style={{fontSize: 18}}>Cadastrar</Text>
-              </TouchableOpacity>
-            </View>
+        <KeyboardAvoidingView behavior="position" enabled keyboardVerticalOffset={-170}>
+          <View style={styles.imgBox}>
+            <Animatable.Image
+              animation="flipInY"
+              source={require('../../assets/img-signin.png')}
+              style={{ width: 200 }}
+              resizeMode="contain"
+            />
           </View>
-        </Animatable.View>
 
+          <Animatable.View delay={600} animation="fadeInUp" style={styles.box}>
+            <View style={styles.inputGroup}>
+              <View style={styles.inputHeader}>
+                <View style={styles.line}></View>
+                <Text style={styles.title}>Login</Text>
+                <View style={styles.line}></View>
+              </View>
+
+              <View style={{top: 15, gap: 10}}>
+                <InputSign place= "Usuário"/>
+                <InputSign place= "Senha" secure={true}/>
+              </View>
+              
+              <View style={{gap: 15, top: 30}}>
+                <TouchableOpacity 
+                style={[styles.btn, styles.btnEntrar]}
+                onPress={ () => navigation.navigate('Home')}
+                >
+                  <Text style={{fontSize: 18, color: '#fff'}}>Entrar</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity 
+                style={[styles.btn, styles.btnCadastrar]}
+                onPress={ () => navigation.navigate('SignUp')}
+                >
+                  <Text style={{fontSize: 18}}>Cadastrar</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </Animatable.View>
+        </KeyboardAvoidingView>
       </View>
     );
   }
@@ -64,23 +65,27 @@ export default function SignIn() {
   const styles = StyleSheet.create({
     imgBox:{
       height: 300,
+
       alignItems: "center",
       justifyContent: "center",
     },
 
     box:{
-      backgroundColor: '#0097b2',
       height: '63%',
-      borderRadius: 10,
       paddingTop: 50,
       paddingHorizontal: 20,
+      borderTopEndRadius: 10,
+      borderTopStartRadius: 10,
+      backgroundColor: '#0097b2',
     },
 
     inputGroup:{
-      padding: 50,
-      backgroundColor: '#ffffff',
       height: '100%',
-      borderRadius: 10,
+      padding: 50,
+      borderTopEndRadius: 10,
+      borderTopStartRadius: 10,
+      backgroundColor: '#ffffff',
+
       alignItems: 'center',
       justifyContent: 'flex-start',
       gap: 10,
@@ -88,6 +93,7 @@ export default function SignIn() {
 
     inputHeader:{
       width: '100%',
+
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'center',
@@ -110,6 +116,7 @@ export default function SignIn() {
       width: 300,
       height: 45,
       borderRadius: 10,
+      
       justifyContent: 'center',
       alignItems: 'center'
     },
