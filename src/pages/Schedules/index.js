@@ -3,9 +3,10 @@ import {
   View, 
   Text, 
   StyleSheet,
-  TouchableOpacity,
   ScrollView
 } from 'react-native'
+
+import SchedulesBox from '../../components/Schedules/SchedulesBox'
 
 import { useNavigation } from '@react-navigation/native'
 
@@ -18,57 +19,10 @@ export default function Schedules() {
 
         <Text style={styles.titleContainer}>Agendamentos vigentes:</Text>
 
-        <View style={styles.schedulesBox}>
-          <View style={styles.schedules}>
-            <Text style={styles.schedulesTitle}>Barbeiro</Text>
-            <Text>Profissional: Severino</Text>
-            <Text>Data: 13/06</Text>
-            <Text>Horario: 14:30</Text>
-
-            <View style={styles.optionsBox}>
-              <TouchableOpacity>
-                <Text style={{color: '#00275b', borderBottomWidth: 0.5}}>Alterar</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity>
-                <Text style={{color: '#a00824', borderBottomWidth: 0.5}}>Cancelar</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-
-          <View style={styles.schedules}>
-            <Text style={styles.schedulesTitle}>Manicure</Text>
-            <Text>Profissional: Adriana</Text>
-            <Text>Data: 13/06</Text>
-            <Text>Horario: 16:30</Text>
-
-            <View style={styles.optionsBox}>
-              <TouchableOpacity>
-                <Text style={{color: '#00275b', borderBottomWidth: 0.5}}>Alterar</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity>
-                <Text style={{color: '#a00824', borderBottomWidth: 0.5}}>Cancelar</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-
-          <View style={styles.schedules}>
-            <Text style={styles.schedulesTitle}>Manicure</Text>
-            <Text>Profissional: Adriana</Text>
-            <Text>Data: 15/06</Text>
-            <Text>Horario: 19:00</Text>
-
-            <View style={styles.optionsBox}>
-              <TouchableOpacity>
-                <Text style={{color: '#00275b', borderBottomWidth: 0.5}}>Alterar</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity>
-                <Text style={{color: '#a00824', borderBottomWidth: 0.5}}>Cancelar</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
+        <View style={{width: '100%', height: '100%'}}>
+          <SchedulesBox nome="Severino" data="14/06" hora="14:00"/>
+          <SchedulesBox nome="Adriana" data="13/06" hora="16:30"/>
+          <SchedulesBox nome="Adriana" data="15/06" hora="19:00"/>
         </View>
 
       </View>
@@ -98,37 +52,5 @@ export default function Schedules() {
       textAlign: 'center',
       textAlignVertical: 'center',
       elevation: 15,
-    },
-
-    schedulesBox:{
-      width: '100%',
-      height: '100%',
-
-    },
-
-    schedules:{
-      padding: 10,
-      margin: 20,
-
-      backgroundColor: '#fff',
-      borderRadius: 5,
-
-      alignItems: 'center',
-      gap: 10,
-      elevation: 5,
-    },
-
-    schedulesTitle:{
-      color: '#00275b',
-      fontSize: 15,
-      fontWeight: 'bold',
-    },
-
-    optionsBox:{
-      width: '100%',
-      marginTop: 10,
-
-      flexDirection: 'row',
-      justifyContent: 'space-around',
     },
   })

@@ -3,7 +3,6 @@ import {
   View, 
   Text, 
   StyleSheet,
-  TouchableOpacity,
 } from 'react-native'
 
 import Severino from './teste/severino';
@@ -62,17 +61,5 @@ export default function Contacts() {
     selectBox:{
       backgroundColor: '#00275b',
       color: '#ffffff',
-    },
-
-    contacts:{
-      gap: 20,
-    },
-
-    contactsBox:{
-      paddingLeft: 20,
-
-      flexDirection: 'row',
-      alignItems: 'center',
-      gap: 10,
     },
   })

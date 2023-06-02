@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
 } from 'react-native'
 
-import Input from '../../components/Input'
+import Input from '../../components/Inputs/Input'
 
 import { useNavigation } from '@react-navigation/native'
 

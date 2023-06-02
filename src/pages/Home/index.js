@@ -7,10 +7,9 @@ import {
   TouchableOpacity,
 } from 'react-native'
 
-import * as Animatable from 'react-native-animatable'
-
 import HeaderBar from '../../components/HeaderBar';
 
+import * as Animatable from 'react-native-animatable'
 import { useNavigation } from '@react-navigation/native'
 
 export default function Home() {
@@ -26,7 +25,7 @@ export default function Home() {
         <View style={styles.body}>
             <Image
             source={require('../../assets/img-signin.png')}
-            style={styles.logo}
+            style={{width: 120, bottom: -60}}
             resizeMode="contain"
             />
 
@@ -37,7 +36,7 @@ export default function Home() {
                 source={require('../../assets/meus-agendamentos.png')}
                 style={{ width: 100, height: 100 }}/>
 
-                <Text style={styles.txt}>Meus Agendamentos</Text> 
+                <Text style={{color: '#ffffff', fontSize: 20}}>Meus Agendamentos</Text> 
             </TouchableOpacity>
 
             <TouchableOpacity 
@@ -46,7 +45,7 @@ export default function Home() {
                 <Image 
                 source={require('../../assets/criar-agendamento.png')}
                 style={{ width: 100, height: 100 }}/>
-                <Text style={styles.txt}>Criar Agendamento</Text>
+                <Text style={{color: '#ffffff', fontSize: 20}}>Criar Agendamento</Text>
             </TouchableOpacity>
         </View>
         
@@ -72,11 +71,6 @@ export default function Home() {
         gap: 20,
     },
 
-    logo:{
-        width: 120,
-        bottom: -60,
-    },
-
     btnBox:{
         height: 180,
         width: 300,
@@ -95,10 +89,4 @@ export default function Home() {
     btn2:{
         backgroundColor: '#0097b2',
     },
-
-    txt:{
-        color: '#ffffff',
-        fontSize: 20,
-    },
-
   })

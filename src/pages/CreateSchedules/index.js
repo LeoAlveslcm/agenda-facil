@@ -16,14 +16,12 @@ export default function CreateSchedules() {
 
     return (
       <View style={styles.container}>
-
         <Text style={styles.titleContainer}>Preencha os campos a seguir:</Text>
 
         <View style={styles.pickerBox}>
           <Text style={styles.pickerTitle}>Selecione o profissional:</Text>
-
           <Picker 
-          style={styles.selectBox}
+          style={{backgroundColor: '#eaeaea'}}
           selectedValue={name}
           onValueChange={(item, indexItem) =>{ setName(item)}}>
               <Picker.Item key={0} value={"Severino"} label="Severino (Barbeiro)" />    
@@ -43,9 +41,8 @@ export default function CreateSchedules() {
 
         <View style={styles.pickerBox}>
           <Text style={styles.pickerTitle}>Selecione a data:</Text>
-
           <Picker 
-          style={styles.selectBox}
+          style={{backgroundColor: '#eaeaea'}}
           selectedValue={name}
           onValueChange={(item, indexItem) =>{ setName(item)}}>
               <Picker.Item key={0} value={"date1"} label="12/06" />    
@@ -58,9 +55,8 @@ export default function CreateSchedules() {
 
         <View style={styles.pickerBox}>
           <Text style={styles.pickerTitle}>Selecione o horario:</Text>
-
           <Picker 
-          style={styles.selectBox}
+          style={{backgroundColor: '#eaeaea'}}
           selectedValue={name}
           onValueChange={(item, indexItem) =>{ setName(item)}}>
               <Picker.Item key={0} value={"hour1"} label="13:00" />    
@@ -74,7 +70,6 @@ export default function CreateSchedules() {
         <TouchableOpacity style={[styles.btn]}>
           <Text style={{fontSize: 18, color: '#fff'}}>Criar Agendamento</Text>
         </TouchableOpacity>
-        
       </View>
     );
   }
@@ -106,10 +101,6 @@ export default function CreateSchedules() {
     pickerBox:{
       width: 350,
       gap: 5,
-    },
-
-    selectBox:{
-      backgroundColor: '#eaeaea',
     },
 
     input:{

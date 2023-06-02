@@ -3,9 +3,10 @@ import {
   View, 
   Text, 
   StyleSheet,
-  TouchableOpacity,
   ScrollView
 } from 'react-native'
+
+import SchedulesAvaibaleBox from '../../components/Schedules/SchedulesAvaibaleBox'
 
 import { useNavigation } from '@react-navigation/native'
 
@@ -14,90 +15,22 @@ export default function Schedules() {
 
     return (
       <ScrollView>
-      <View style={styles.container}>
+        <View style={styles.container}>
+          <Text style={styles.titleContainer}>Agendamentos por data:</Text>
 
-        <Text style={styles.titleContainer}>Agendamentos por data:</Text>
-        <Text>Terça-Feira 13/06</Text>
+          <View style={{width: '100%'}}>
+            <Text style={{textAlign: 'center'}}>Terça-Feira 13/06</Text>
 
-        <View style={styles.schedulesBox}>
-          <View style={styles.schedules}>
-            <View style={{gap: 10}}>
-              <Text>Cliente: Carlos</Text>
-              <Text>Data: 13/06</Text>
-              <Text>Horario: 14:30</Text>
-            </View>
-            
-            <View style={styles.optionsBox}>
-              <TouchableOpacity>
-                <Text style={{color: '#00275b', borderBottomWidth: 0.5}}>Entrar em contato</Text>
-              </TouchableOpacity>
+            <SchedulesAvaibaleBox nome="Carlos" data="13/06" hora="14:30"/>
+            <SchedulesAvaibaleBox nome="Lucas" data="13/06" hora="16:00"/>
+            <SchedulesAvaibaleBox nome="João" data="13/06" hora="17:30"/>
 
-              <TouchableOpacity>
-                <Text style={{color: '#a00824', borderBottomWidth: 0.5}}>Cancelar</Text>
-              </TouchableOpacity>
-            </View>
+            <Text style={{textAlign: 'center'}}>Quarta-Feira 14/06</Text>
+
+            <SchedulesAvaibaleBox nome="Felipe" data="14/06" hora="14:30"/>
           </View>
 
-          <View style={styles.schedules}>
-            <View style={{gap: 10}}>
-              <Text>Cliente: João</Text>
-              <Text>Data: 13/06</Text>
-              <Text>Horario: 16:00</Text>
-            </View>
-            
-            <View style={styles.optionsBox}>
-              <TouchableOpacity>
-                <Text style={{color: '#00275b', borderBottomWidth: 0.5}}>Entrar em contato</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity>
-                <Text style={{color: '#a00824', borderBottomWidth: 0.5}}>Cancelar</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-
-          <View style={styles.schedules}>
-            <View style={{gap: 10}}>
-              <Text>Cliente: Felipe</Text>
-              <Text>Data: 13/06</Text>
-              <Text>Horario: 17:30</Text>
-            </View>
-            
-            <View style={styles.optionsBox}>
-              <TouchableOpacity>
-                <Text style={{color: '#00275b', borderBottomWidth: 0.5}}>Entrar em contato</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity>
-                <Text style={{color: '#a00824', borderBottomWidth: 0.5}}>Cancelar</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
         </View>
-
-        <Text>Quarta-Feira 14/06</Text>
-
-        <View style={styles.schedulesBox}>
-          <View style={styles.schedules}>
-            <View style={{gap: 10}}>
-              <Text>Cliente: Lucas</Text>
-              <Text>Data: 14/06</Text>
-              <Text>Horario: 14:30</Text>
-            </View>
-            
-            <View style={styles.optionsBox}>
-              <TouchableOpacity>
-                <Text style={{color: '#00275b', borderBottomWidth: 0.5}}>Entrar em contato</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity>
-                <Text style={{color: '#a00824', borderBottomWidth: 0.5}}>Cancelar</Text>
-              </TouchableOpacity>
-            </View>
-          </View>
-        </View>
-
-      </View>
       </ScrollView>
     );
   }
@@ -124,28 +57,5 @@ export default function Schedules() {
       textAlign: 'center',
       textAlignVertical: 'center',
       elevation: 15,
-    },
-
-    schedulesBox:{
-      width: '100%',
-    },
-
-    schedules:{
-      padding: 10,
-      margin: 20,
-
-      backgroundColor: '#fff',
-      borderRadius: 5,
-
-      flexDirection: 'row',
-      alignItems: 'flex-start',
-      justifyContent: 'space-around',
-      elevation: 5,
-    },
-
-    optionsBox:{
-      marginTop: 10,
-      alignItems: 'center',
-      gap: 10,
     },
   })

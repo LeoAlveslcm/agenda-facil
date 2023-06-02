@@ -7,10 +7,9 @@ import {
   TouchableOpacity,
 } from 'react-native'
 
-import * as Animatable from 'react-native-animatable'
-
 import HeaderBar from '../../components/HeaderBar';
 
+import * as Animatable from 'react-native-animatable'
 import { useNavigation } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons'
 
@@ -27,7 +26,7 @@ export default function Home() {
         <View style={styles.body}>
             <Image
             source={require('../../assets/img-signin.png')}
-            style={styles.logo}
+            style={{width: 120, bottom: -60}}
             resizeMode="contain"
             />
 
@@ -38,7 +37,7 @@ export default function Home() {
                 source={require('../../assets/consultar-agendamentos.png')}
                 style={{ width: 100, height: 100 }}/>
 
-                <Text style={styles.txt}>Consultar Agendamentos</Text> 
+                <Text style={{color: '#ffffff', fontSize: 20}}>Consultar Agendamentos</Text> 
             </TouchableOpacity>
 
             <TouchableOpacity 
@@ -47,7 +46,7 @@ export default function Home() {
                 <Image 
                 source={require('../../assets/disponibilizar-agendamentos.png')}
                 style={{ width: 100, height: 100 }}/>
-                <Text style={styles.txt}>Disponibilizar Agendamento</Text>
+                <Text style={{color: '#ffffff', fontSize: 20}}>Disponibilizar Agendamento</Text>
             </TouchableOpacity>
         </View>
 
@@ -78,11 +77,6 @@ export default function Home() {
         gap: 20,
     },
 
-    logo:{
-        width: 120,
-        bottom: -60,
-    },
-
     btnBox:{
         height: 180,
         width: 300,
@@ -100,10 +94,5 @@ export default function Home() {
 
     btn2:{
         backgroundColor: '#0097b2',
-    },
-
-    txt:{
-        color: '#ffffff',
-        fontSize: 20,
     },
   })

@@ -4,10 +4,9 @@ import {
   Text, 
   StyleSheet,
   TouchableOpacity,
-  TextInput
 } from 'react-native'
 
-import InputSign from '../../components/InputSign'
+import InputSign from '../../components/Inputs/InputSign'
 
 import * as Animatable from 'react-native-animatable'
 import { useNavigation } from '@react-navigation/native'
@@ -35,12 +34,12 @@ export default function SignIn() {
               <View style={styles.line}></View>
             </View>
 
-            <View style={styles.inputBox}>
+            <View style={{top: 15, gap: 10}}>
               <InputSign place= "Usuário"/>
               <InputSign place= "Senha" secure={true}/>
             </View>
             
-            <View style={styles.inputButtons}>
+            <View style={{gap: 15, top: 30}}>
               <TouchableOpacity 
               style={[styles.btn, styles.btnEntrar]}
               onPress={ () => navigation.navigate('Home')}
@@ -95,11 +94,6 @@ export default function SignIn() {
       gap: 20,
     },
 
-    inputBox:{
-      top: 15,
-      gap: 10,
-    },
-
     line:{
       height: 1,
       width: 100,
@@ -109,11 +103,6 @@ export default function SignIn() {
     title:{
       fontSize: 25,
       color: '#00275b'
-    },
-
-    inputButtons:{
-      gap: 15,
-      top: 30,
     },
 
     btn:{

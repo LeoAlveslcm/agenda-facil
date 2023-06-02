@@ -7,7 +7,7 @@ import {
   ScrollView
 } from 'react-native'
 
-import Input from "../../components/Input"
+import Input from "../../components/Inputs/Input"
 import SaveButton from "../../components/SaveButton"
 
 import { useNavigation } from '@react-navigation/native'

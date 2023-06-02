@@ -5,10 +5,9 @@ import {
   Text, 
   StyleSheet,
   TouchableOpacity,
-  TextInput,
 } from 'react-native'
 
-import InputSign from '../../components/InputSign'
+import InputSign from '../../components/Inputs/InputSign'
 
 import * as Animatable from 'react-native-animatable'
 import { useNavigation } from '@react-navigation/native'
@@ -23,7 +22,7 @@ export default function SignUn() {
 
         <Animatable.View animation="fadeInUp" style={styles.box}>
           <View style={styles.inputGroup}>
-            <View style={styles.inputForm}>
+            <View style={{gap: 15}}>
               
               <InputSign place= "Nome"/>
               <InputSign place= "Sobrenome"/>
@@ -98,10 +97,6 @@ export default function SignUn() {
 
       backgroundColor: '#ffffff',
       borderRadius: 10,
-    },
-
-    inputForm:{
-      gap: 15,
     },
 
     checkView:{
